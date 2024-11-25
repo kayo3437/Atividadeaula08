@@ -8,6 +8,10 @@
 /**
  * Este código verificou se uma pessoa é menor ou maior de idade.
  * 
+ * A função usa um operador (?) para verificar se a idade é menor que 18.
+   Se a condição for verdadeira (idade < 18), retorna "Menor de idade".
+   Caso isso não aconteça, retorna "Maior de idade".
+ *
  * @example
  * verificarIdade(12); // "Menor de idade"
  * verificarIdade(43); // "Maior de idade"
@@ -25,7 +29,8 @@ function verificarIdade(idade) {
 
 /**
  * Este código retorna o nome do dia da semana com base em um número.
- * 
+ * A função usa uma estrutura switch para verificar o valor de dia.
+   Cada case está associado a um dia específico, e o default funciona para os valores inválidos, retornando "Número inválido".
  * @example
  * definirDiaDaSemana(1); // "Domingo"
  * definirDiaDaSemana(5); // "Quinta-feira"
@@ -53,7 +58,9 @@ function definirDiaDaSemana(dia) {
 
 /**
  * Este código verifica se um número é par ou ímpar.
- * 
+ * Usei uma arrow function para tornar o código mais simples.
+   Verifica o resto da divisão por 2 com o operador %.
+   Se o resto for 0, o número é par, caso não seja, é ímpar.
  * @example
  * parOuImpar(30); // "Par"
  * parOuImpar(11); // "Ímpar"
@@ -68,7 +75,10 @@ const parOuImpar = (numero) => numero % 2 === 0 ? "Par" : "Ímpar";
 ```javascript
 /**
  * Este código verifica se um usuário pode acessar o sistema.
- * 
+ * As condições analisam:
+   Se o usuário tem mais de 18 anos ou é administrador (idade > 18 || isAdmin).
+   Se o usuário não está bloqueado (!isBlocked).
+   Retorna true se ambas as condições forem corretas; caso contrário, false.
  * @example
  * podeAcessar({ idade: 22, isAdmin: false, isBlocked: false }); // true
  * podeAcessar({ idade: 14, isAdmin: true, isBlocked: true });   // false
@@ -89,7 +99,8 @@ function podeAcessar(usuario) {
 ```javascript
 /**
  * Este código calcula o preço com desconto de um produto.
- * 
+ * A função calcula o valor do desconto multiplicando o preço original do produto pela porcentagem de desconto e divide por 100.
+   Subtrai esse valor do preço original para obter o preço final.
  * @example
  * calcularDesconto(100, 10); // 90
  * calcularDesconto(250, 20); // 200
